@@ -1,3 +1,13 @@
+jim wang
+=======================
+icn消息生成器使用之前需要事先生成data数据
+icn消息生成器需要设置responseSize和responseMsgName
+初始化的data 和缓存的data都放在router. delivery messages里面
+没有用pit，用的dtn的底层实现，第一次持有，第二次丢弃；
+
+
+
+
 The ONE v1.6.0 - Readme
 =======================
 
