@@ -8,6 +8,7 @@ import core.*;
 import input.ICNMessageCreateEvent;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -126,6 +127,14 @@ public class DSRRouter extends ActiveRouter {
 		return null; // no message was accepted
 	}
 
+	/**
+	 * interest 到达不命中和不到达终点的data存放在messages里面，命中的interest和data放在deliverymessages里面
+	 *	作为interest的响应data ，放在messages里面
+	 * 缓存的data放在deliverymessages里面
+	 * @param id
+	 * @param from
+     * @return
+     */
 	@Override
 	public Message messageTransferred(String id, DTNHost from) {
 		Message incoming = removeFromIncomingBuffer(id, from);
@@ -164,7 +173,7 @@ public class DSRRouter extends ActiveRouter {
 //			}else{
 //				dataMessages = new ArrayList<>(this.getMessageCollection());
 //			}
-
+			//hit data
 			if(dataMessages!=null&&dataMessages.size()!=0){
 				for(Message m : dataMessages){
 					isFinalRecipient=isFinalRecipient|m.getId().equals(aMessage.getProperty("responseMsgName").toString());
@@ -205,6 +214,7 @@ public class DSRRouter extends ActiveRouter {
 					//this.getHost().addRecord(aMessage.getId(),aMessage.getFrom().toString(),popularity,timestamp);
 					//TODO: cache strategy
 					if(!isDeliveredMessage(aMessage)){
+						//put in deliveryMessageList
 						cache(aMessage,from,false);
 
 					}
@@ -280,4 +290,104 @@ public class DSRRouter extends ActiveRouter {
 		return new DSRRouter(this);
 	}
 
+	@Override
+	public int getBufferSize() {
+		return super.getBufferSize();
+	}
+
+	/**
+	 * 将deliveryMessages 和messages一起计算
+	 * @return
+     */
+	@Override
+	public int getFreeBufferSize() {
+		int occupancy = 0;
+
+		if (this.getBufferSize() == Integer.MAX_VALUE) {
+			return Integer.MAX_VALUE;
+		}
+
+		for (Message m : getMessageCollection()) {
+			occupancy += m.getSize();
+		}
+		//deliveryMessages
+		for(Message m: getDeliveredMessages().values()){
+			occupancy += m.getSize();
+		}
+
+		return this.getBufferSize() - occupancy;
+	}
+
+	protected DSRRouter(ActiveRouter r) {
+		super(r);
+	}
+
+	/**
+	 * 我把deliverymessages和messages一起作为存储空间来看，后者相当于内存，前者相当于硬盘	 * @param size Size of the new message
+
+     */
+
+
+	@Override
+	protected void dropExpiredMessages() {
+		List<Message> messages = new ArrayList<>(this.getMessageCollection());
+		//add deliveryMessages
+		messages.addAll(this.getDeliveredMessages().values());
+		for(Message m :messages) {
+			int ttl = m.getTtl();
+			if(ttl<= 0){
+				deleteMessage(m.getId(),true);
+		}
+
+	}
+
+
+	}
+
+	@Override
+	protected Message getNextMessageToRemove(boolean excludeMsgBeingSent) {
+		List<Message> messages = new ArrayList<>(this.getMessageCollection());
+		//add deliveryMessages
+		messages.addAll(this.getDeliveredMessages().values());
+		Message oldest = null;
+		for (Message m : messages) {
+
+			if (excludeMsgBeingSent && isSending(m.getId())) {
+				continue; // skip the message(s) that router is sending
+			}
+
+			if (oldest == null ) {
+				oldest = m;
+			}
+			else if (oldest.getReceiveTime() > m.getReceiveTime()) {
+				oldest = m;
+			}
+		}
+
+		return oldest;
+	}
+
+	@Override
+	public void deleteMessage(String id, boolean drop) {
+		Message removed = removeFromMessages(id);
+		if (removed == null) throw new SimError("no message for id " +
+				id + " to remove at " + this.getHost());
+
+		for (MessageListener ml : this.getmListeners()) {
+			ml.messageDeleted(removed, this.getHost(), drop);
+		}
+	}
+
+	@Override
+	protected Message removeFromMessages(String id) {
+		Message m =null ;
+		if(this.getMessages().containsKey(id)) {
+			m=this.getMessages().remove(id);
+			return m;
+		}else if( this.getDeliveredMessages().containsKey(id)){
+			m =this.getDeliveredMessages().remove(id);
+		}
+		return m;
+
+	}
 }

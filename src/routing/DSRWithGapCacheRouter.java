@@ -52,7 +52,7 @@ public class DSRWithGapCacheRouter extends DSRRouter {
         boolean isInterest;
 
         isInterest = aMessage.getProperty("type")==0;
-
+        //data 的命中信号
         isFinalRecipient = aMessage.getTo() == this.getHost();
 //        isFirstDelivery = isFinalRecipient &&
 //                !isDeliveredMessage(aMessage);

@@ -1,0 +1,20 @@
+Message stats for scenario vanetWithGapCache_N_7
+sim_time: 18000.0000
+created: 13076
+started: 236126
+relayed: 23283
+aborted: 52704
+dropped: 152224
+removed: 0
+delivered: 12788
+delivery_prob: 0.9780
+response_prob: 0.3918
+overhead_ratio: 0.8207
+latency_avg: 5532.7948
+latency_med: 5251.0000
+hopcount_avg: 9.4531
+hopcount_med: 9
+buffertime_avg: 1741.3903
+buffertime_med: 1603.0000
+rtt_avg: 1568.5789
+rtt_med: 1142.0000

@@ -1,0 +1,20 @@
+Message stats for scenario vanetWithoutCache_100node
+sim_time: 18000.0000
+created: 1479
+started: 125109
+relayed: 100681
+aborted: 25621
+dropped: 96167
+removed: 0
+delivered: 1267
+delivery_prob: 0.8567
+response_prob: 0.1031
+overhead_ratio: 78.4641
+latency_avg: 2323.2005
+latency_med: 1744.0000
+hopcount_avg: 5.2313
+hopcount_med: 5
+buffertime_avg: 413.1782
+buffertime_med: 318.0000
+rtt_avg: 1456.9000
+rtt_med: 695.0000

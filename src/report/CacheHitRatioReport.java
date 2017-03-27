@@ -8,6 +8,11 @@ import core.DTNHost;
 import core.Message;
 import core.MessageListener;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Report for the probability to obtain a cache hit
  along the path from a request node to a node caching the requested information object.
@@ -18,8 +23,9 @@ import core.MessageListener;
  */
 public class CacheHitRatioReport extends Report implements MessageListener {
 	public static String HEADER="# time  hit_cache  total_cache  hit_cache/total_cache";
-	private int hit;
-	private int total;
+
+	private Map<String,Double>  cacheHitRatio;
+
 
 	/**
 	 * Constructor.
@@ -27,30 +33,47 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 	public CacheHitRatioReport() {
 		init();
 	}
-	
+
 	@Override
 	public void init() {
 		super.init();
-		hit = 0;
-		total = 0;
+
+		cacheHitRatio =new HashMap<String ,Double>();
 		write(HEADER);
 	}
 
-	public void messageTransferred(Message m, DTNHost from, DTNHost to, 
-			boolean firstDelivery) {
+	public void messageTransferred(Message m, DTNHost from, DTNHost to,
+								   boolean firstDelivery) {
 		//(isInterest,firstDelivery)
 		//11 request命中
 		//01 data第一次到达
 		//00 data的初始化
 		//10 request不是第一次命中
 
-//		boolean isInterest = m.getProperty("type")==0;
-//		if ( isInterest && firstDelivery && !isWarmup() && !isWarmupID(m.getId())) {
-//			hit++;
-//
-//		}
+		boolean isInterest = m.getProperty("type")==0;
+		if ( isInterest && firstDelivery && !isWarmup() && !isWarmupID(m.getId())) {
+			int unHitNum =0;
+			int hitNum = 0;
+			Collection<Message> messages = to .getMessageCollection();
+			Collection<Message> deliveryMessages = to.getRouter().getDeliveredMessages().values();
+			for(Message mi :messages){
+				if(mi.getProperty("type")==0) {//isInterest
+					unHitNum++;
+				}
+			}
+			for(Message mhi: deliveryMessages){
+				if(mhi.getProperty("type")==0) {//isInterest
+					hitNum++;
+				}
+			}
+			double cacheHitRatioNum = (double)hitNum/(unHitNum + hitNum);
+			cacheHitRatio.put(to.toString(),cacheHitRatioNum);
+
+
+
+		}
 //		if(!isInterest && !firstDelivery && !isWarmup() && !isWarmupID(m.getId())){
-//			total++;
+//
 //		}
 
 		reportValues();
@@ -68,13 +91,19 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 ////		}
 ////		reportValues();
 	}
-	
+
 	/**
 	 * Writes the current values to report file
 	 */
 	private void reportValues() {
-		double prob = (1.0 * hit) / total;
-		write(format(getSimTime()) + " " + hit + " " + total +
+		double prob =0.0;
+		Collection<Double> probs =  cacheHitRatio.values();
+		for(double p: probs){
+			prob+=p;
+
+		}
+		prob = prob/probs.size();
+		write(format(getSimTime()) + " "  +
 				" " + format(prob));
 	}
 
@@ -87,6 +116,10 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 	public void done() {
 		write("done----------------------");
 		reportValues();
+//		for( Map.Entry<String ,Double> entry :cacheHitRatio.entrySet()){
+//			write(entry.getKey() + " "  +
+//					" " + format(entry.getValue()));
+//		}
 		super.done();
 	}
 }

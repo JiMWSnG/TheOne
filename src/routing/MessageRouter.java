@@ -263,7 +263,7 @@ public abstract class MessageRouter {
 	 */
 	public int getFreeBufferSize() {
 		int occupancy = 0;
-		
+
 		if (this.getBufferSize() == Integer.MAX_VALUE) {
 			return Integer.MAX_VALUE;
 		}

@@ -1,0 +1,2 @@
+# deliveryTime  hopCount
+averageTime:NaN  averageHopCount:NaN
