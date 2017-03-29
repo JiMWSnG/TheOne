@@ -10,7 +10,6 @@ import core.MessageListener;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,6 +24,8 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 	public static String HEADER="# time  hit_cache  total_cache  hit_cache/total_cache";
 
 	private Map<String,Double>  cacheHitRatio;
+	private Map<String,Integer> deleteInterestNum;
+	private Map<String,Integer> hitIntNum;
 
 
 	/**
@@ -39,6 +40,9 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 		super.init();
 
 		cacheHitRatio =new HashMap<String ,Double>();
+		deleteInterestNum =new HashMap<String ,Integer>();
+		hitIntNum =new HashMap<String ,Integer>();
+
 		write(HEADER);
 	}
 
@@ -61,12 +65,19 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 					unHitNum++;
 				}
 			}
-			for(Message mhi: deliveryMessages){
+			for(Message mhi:deliveryMessages){
 				if(mhi.getProperty("type")==0) {//isInterest
 					hitNum++;
 				}
 			}
-			double cacheHitRatioNum = (double)hitNum/(unHitNum + hitNum);
+
+
+				int totalHitNum = hitIntNum.get(to.toString())==null?0:hitIntNum.get(to.toString());
+				hitIntNum.put(to.toString(),++totalHitNum);
+
+			 int deleteNum = deleteInterestNum.get(to.toString())==null?0:deleteInterestNum.get(to.toString());
+
+			double cacheHitRatioNum = (double)totalHitNum/(unHitNum + hitNum+deleteNum);//命中的int/(剩余未命中的+剩余命中的+删除的)
 			cacheHitRatio.put(to.toString(),cacheHitRatioNum);
 
 
@@ -108,7 +119,15 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 	}
 
 	// nothing to implement for the rest
-	public void messageDeleted(Message m, DTNHost where, boolean dropped) {}
+	public void messageDeleted(Message m, DTNHost where, boolean dropped) {
+		if(m.getProperty("type")==0){
+			Integer num =deleteInterestNum.get(where.toString());
+			if(num==null)
+				deleteInterestNum.put(where.toString(),1);
+			else
+				deleteInterestNum.put(where.toString(),++num);
+		}
+	}
 	public void messageTransferAborted(Message m, DTNHost from, DTNHost to) {}
 	public void messageTransferStarted(Message m, DTNHost from, DTNHost to) {}
 
