@@ -63,6 +63,12 @@ public class BufferOccupancyReport extends Report implements UpdateListener {
 			lastRecord = SimClock.getTime();
 			printLine(hosts);
 		}
+
+			if (SimClock.getTime()%7200==0) {
+				write(SimClock.getTime()+"-------------------------------------------------------------------------------------done");
+				printLine(hosts);
+			}
+
 	}
 
 	/**

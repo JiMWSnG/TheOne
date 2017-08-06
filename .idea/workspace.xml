@@ -3,9 +3,74 @@
   <component name="ChangeListManager">
     <list default="true" id="1149314a-2320-4a84-8004-d07d0b1742da" name="Default" comment="2017.03.27 将message和deliveryMessages一起纳入存储管理，在存储替换机制中添加了deliveryMessages部分的替换，主要是删除部分；">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_BufferOccupancyReport.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_10M_AverageHitMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_CreatedMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_BufferOccupancyReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_ContactsPerHourReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_TotalEncountersReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Density100/1/default_scenario_ContactTimesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_ContactTimesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_MessageStatsReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_AverageHitMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_NAN_BufferOccupancyReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_NAN_CacheHitRatioReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_NAN_AverageHitMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_EncountersVSUniqueEncountersReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_NAN_BufferOccupancyReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_10M_AverageHitMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_CacheHitRatioReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_InterContactTimesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Density100/1/default_scenario_MessageStatsReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_UniqueEncountersReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_DeliveredMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_MessageStatsReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_10M_CacheHitRatioReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_NAN_CacheHitRatioReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_10M_BufferOccupancyReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_10M_BufferOccupancyReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithoutCache_10M_CacheHitRatioReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Manhattan/1/default_scenario_ContactsDuringAnICTReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_NAN_AverageHitMessagesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Density100/1/default_scenario_ContactsDuringAnICTReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Density100/1/default_scenario_InterContactTimesReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/100node/vanetWithoutCache_100node_MessageDeliveryReport.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/Density100/1/default_scenario_ContactsPerHourReport.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/the-one/report/AverageHitMessagesReport.class" afterPath="$PROJECT_DIR$/out/production/the-one/report/AverageHitMessagesReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_BufferOccupancyReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/the-one/routing/MessageRouter.class" afterPath="$PROJECT_DIR$/out/production/the-one/routing/MessageRouter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_BufferOccupancyReport.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/the-one/report/CacheHitRatioReport.class" afterPath="$PROJECT_DIR$/out/production/the-one/report/CacheHitRatioReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DSRWithGapCache_cacheSizeNAN.txt" afterPath="$PROJECT_DIR$/DSRWithGapCache_cacheSizeNAN.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/the-one/report/BufferOccupancyReport.class" afterPath="$PROJECT_DIR$/out/production/the-one/report/BufferOccupancyReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_BufferOccupancyReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DSRWithGapCache_setting.txt" afterPath="$PROJECT_DIR$/DSRWithGapCache_setting.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_BufferOccupancyReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DSR_cacheSizeNAN.txt" afterPath="$PROJECT_DIR$/DSR_cacheSizeNAN.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_BufferOccupancyReport.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/report/AverageHitMessagesReport.java" afterPath="$PROJECT_DIR$/src/report/AverageHitMessagesReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer10_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer10_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_BufferOccupancyReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_BufferOccupancyReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_MessageStatsReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_bufferNAN_MessageStatsReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/report/BufferOccupancyReport.java" afterPath="$PROJECT_DIR$/src/report/BufferOccupancyReport.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/report/CacheHitRatioReport.java" afterPath="$PROJECT_DIR$/src/report/CacheHitRatioReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_AverageHitMessagesReport.txt" afterPath="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_AverageHitMessagesReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_CacheHitRatioReport.txt" afterPath="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_bufferNAN_CacheHitRatioReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DSR_setting.txt" afterPath="$PROJECT_DIR$/DSR_setting.txt" />
     </list>
     <ignored path="the-one.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,104 +103,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vanetWithoutCache_130_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_BufferOccupancyReport.txt">
+      <file leaf-file-name="DSR_setting.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DSR_setting.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68381">
-              <caret line="3599" column="18" selection-start-line="3599" selection-start-column="11" selection-end-line="3599" selection-end-column="18" />
+            <state relative-caret-position="1273">
+              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vanetWithGapCache_530_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_530_BufferOccupancyReport.txt">
+      <file leaf-file-name="vanetWithoutCache_size530_MessageCopyCountReport.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size530_MessageCopyCountReport.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68400">
-              <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
+            <state relative-caret-position="944281">
+              <caret line="49699" column="7" selection-start-line="49567" selection-start-column="0" selection-end-line="49699" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vanetWithGapCache_430_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_430_BufferOccupancyReport.txt">
+      <file leaf-file-name="vanetWithoutCache_time_MessageCopyCountReport.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_time_MessageCopyCountReport.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68400">
-              <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
+            <state relative-caret-position="938239">
+              <caret line="49381" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="119492" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DSRWithGapCache_setting.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vanetWithoutCache_size430_MessageCopyCountReport.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size430_MessageCopyCountReport.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="940253">
+              <caret line="49487" column="0" selection-start-line="49350" selection-start-column="0" selection-end-line="49487" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DSRWithGapCache_setting.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DSRWithGapCache_setting.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="855">
+              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vanetWithGapCache_330_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_330_BufferOccupancyReport.txt">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68400">
-              <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
+            <state relative-caret-position="3135">
+              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="252" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vanetWithGapCache_230_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_230_BufferOccupancyReport.txt">
+      <file leaf-file-name="vanetWithoutCache_size230_MessageCopyCountReport.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size230_MessageCopyCountReport.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68400">
-              <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
+            <state relative-caret-position="923799">
+              <caret line="48621" column="7" selection-start-line="48471" selection-start-column="0" selection-end-line="48621" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vanetWithGapCache_130_BufferOccupancyReport.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_130_BufferOccupancyReport.txt">
+      <file leaf-file-name="vanetWithoutCache_size330_MessageCopyCountReport.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size330_MessageCopyCountReport.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68400">
-              <caret line="3600" column="13" selection-start-line="3600" selection-start-column="13" selection-end-line="3600" selection-end-column="13" />
+            <state relative-caret-position="930639">
+              <caret line="48981" column="6" selection-start-line="48981" selection-start-column="6" selection-end-line="48981" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BufferOccupancyReport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/report/BufferOccupancyReport.java">
+      <file leaf-file-name="ParetoRNG.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/ParetoRNG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1577">
-              <caret line="91" column="48" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#2486#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vanetWithoutCache_530_BufferOccupancyReport.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_BufferOccupancyReport.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63130">
-              <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CacheHitRatioReport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/report/CacheHitRatioReport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-78">
-              <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+            <state relative-caret-position="437">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -166,27 +218,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reports/vanetWithoutCache_MessageGraphvizReport.txt" />
-        <option value="$PROJECT_DIR$/src/report/AverageHitMessagesReport.java" />
-        <option value="$PROJECT_DIR$/src/routing/util/Popularity.java" />
-        <option value="$PROJECT_DIR$/reports/N_simulate/vanetWithGapCache_N_2_AverageHitMessagesReport.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_N_4.txt" />
-        <option value="$PROJECT_DIR$/src/input/BinaryEventsReader.java" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_range400.txt" />
-        <option value="$PROJECT_DIR$/DSR_range400.txt" />
-        <option value="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_10M_BufferOccupancyReport.txt" />
-        <option value="$PROJECT_DIR$/reports/range/400/vanetWithGapCache_range400_CacheHitRatioReport.txt" />
-        <option value="$PROJECT_DIR$/reports/N_simulate/vanetWithGapCache_N_4_CacheHitRatioReport.txt" />
-        <option value="$PROJECT_DIR$/reports/N_simulate/vanetWithGapCache_N_3_CacheHitRatioReport.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_N_3.txt" />
-        <option value="$PROJECT_DIR$/reports/N_simulate/vanetWithGapCache_N_2_CacheHitRatioReport.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_N_2.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_N_5.txt" />
         <option value="$PROJECT_DIR$/reports/N_simulate/vanetWithGapCache_N_7_AverageHitMessagesReport.txt" />
         <option value="$PROJECT_DIR$/DSRWithGapCache_230.txt" />
         <option value="$PROJECT_DIR$/reports/nodeSize/130/vanetWithGapCache_130_MessageStatsReport.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_cacheSizeNAN.txt" />
-        <option value="$PROJECT_DIR$/DSR_cacheSizeNAN.txt" />
         <option value="$PROJECT_DIR$/src/input/DATAINITMessageCreateEvent.java" />
         <option value="$PROJECT_DIR$/reports/nodeSize/530/vanetWithoutCache_530_AverageHitMessagesReport.txt" />
         <option value="$PROJECT_DIR$/reports/time/vanetWithGapCache_time3_CacheHitRatioReport.txt" />
@@ -211,12 +245,30 @@
         <option value="$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_CacheHitRatioReport.txt" />
         <option value="$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_BufferOccupancyReport.txt" />
         <option value="$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_AverageHitMessagesReport.txt" />
-        <option value="$PROJECT_DIR$/src/report/BufferOccupancyReport.java" />
         <option value="$PROJECT_DIR$/reports/nodeSize/130/vanetWithGapCache_130_CacheHitRatioReport.txt" />
-        <option value="$PROJECT_DIR$/DSRWithGapCache_setting.txt" />
-        <option value="$PROJECT_DIR$/DSR_setting.txt" />
-        <option value="$PROJECT_DIR$/src/report/CacheHitRatioReport.java" />
         <option value="$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_BufferOccupancyReport.txt" />
+        <option value="$PROJECT_DIR$/DSRWithGapCache_cacheSizeNAN.txt" />
+        <option value="$PROJECT_DIR$/DSR_cacheSizeNAN.txt" />
+        <option value="$PROJECT_DIR$/src/report/BufferOccupancyReport.java" />
+        <option value="$PROJECT_DIR$/src/report/CacheHitRatioReport.java" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/cacheSize/vanetWithGapCache_10M_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer20_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/buffer/vanetWithoutCache_buffer20_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/reports/buffer/vanetWithGapCache_buffer20_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/src/report/AverageHitMessagesReport.java" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_200node_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_300node_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/node/vanetWithGapCache_130_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/node/vanetWithoutCache_time_430_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/node/vanetWithGapCache_130_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_300node_CacheHitRatioReport.txt" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithGapCache_time_300node_BufferOccupancyReport.txt" />
+        <option value="$PROJECT_DIR$/reports/time/vanetWithoutCache_time_300node_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/DSRWithGapCache_setting.txt" />
+        <option value="$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache5M_AverageHitMessagesReport.txt" />
+        <option value="$PROJECT_DIR$/DSR_setting.txt" />
       </list>
     </option>
   </component>
@@ -234,9 +286,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="width" value="1318" />
-    <option name="height" value="775" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -300,6 +353,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,6 +370,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="the-one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="the-one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="the-one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,39 +437,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="report" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="the-one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="the-one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zipf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="the-one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="the-one" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reports" />
+              <option name="myItemId" value="input" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -416,8 +457,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -435,8 +474,9 @@
     <property name="SearchEverywhereHistoryKey" value="ICN&#9;PSI&#9;JAVA://core.ICNHost&#10;messa&#9;PSI&#9;JAVA://core.Message&#10;tuple&#9;PSI&#9;JAVA://util.Tuple&#10;world&#9;FILE&#9;file://F:/the-one/src/core/World.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\the-one\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\the-one\reports\p_r_gap" />
+      <recent name="F:\the-one" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="util" />
@@ -444,9 +484,8 @@
       <recent name="input" />
       <recent name="routing" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\the-one\reports\p_r_gap" />
-      <recent name="F:\the-one" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\the-one\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.DTNSim">
@@ -941,7 +980,21 @@
       <workItem from="1490529645936" duration="9297000" />
       <workItem from="1490616445527" duration="9433000" />
       <workItem from="1490668426391" duration="4075000" />
-      <workItem from="1490801456229" duration="279000" />
+      <workItem from="1490801456229" duration="391000" />
+      <workItem from="1490844272980" duration="8605000" />
+      <workItem from="1491306666794" duration="5342000" />
+      <workItem from="1491357252475" duration="732000" />
+      <workItem from="1491388136477" duration="3946000" />
+      <workItem from="1491444335586" duration="6920000" />
+      <workItem from="1491558532065" duration="20714000" />
+      <workItem from="1496399318222" duration="2445000" />
+      <workItem from="1496459850650" duration="615000" />
+      <workItem from="1496502201488" duration="605000" />
+      <workItem from="1496669817687" duration="103000" />
+      <workItem from="1496670072118" duration="2652000" />
+      <workItem from="1496712383507" duration="13542000" />
+      <workItem from="1497182939335" duration="730000" />
+      <workItem from="1502001224995" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="DSRRouter是一种按路返回的adhoc路由，采用处处缓存的机制；&#10;DSRWithGapCacheRouter在DSRRoute的基础上运用了gap缓存">
       <created>1484810840428</created>
@@ -964,11 +1017,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490627701967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2017.03.29 更新了cachehitratioreport">
+      <created>1490801781720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490801781720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210244000" />
+    <option name="totallyTimeSpent" value="277315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,29 +1040,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="0" width="1318" height="775" extended-state="0" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730159" sideWeight="0.49086758" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3464837" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34" sideWeight="0.5031746" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3534202" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25895765" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26709062" sideWeight="0.49086758" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24880762" sideWeight="0.5692308" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3534202" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920635" sideWeight="0.5692308" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761577" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="77" y="139" width="1110" height="580" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2776886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920635" sideWeight="0.55676854" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24880762" sideWeight="0.43076923" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736155" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1038,11 +1098,20 @@
     <MESSAGE value="DSRRouter是一种按路返回的adhoc路由，采用处处缓存的机制；&#10;DSRWithGapCacheRouter在DSRRoute的基础上运用了gap缓存" />
     <MESSAGE value="2017.03.22 data消息产生器按zipf产生request；" />
     <MESSAGE value="2017.03.27 将message和deliveryMessages一起纳入存储管理，在存储替换机制中添加了deliveryMessages部分的替换，主要是删除部分；" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017.03.27 将message和deliveryMessages一起纳入存储管理，在存储替换机制中添加了deliveryMessages部分的替换，主要是删除部分；" />
+    <MESSAGE value="2017.03.29 更新了cachehitratioreport" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017.03.29 更新了cachehitratioreport" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="83" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/report/BufferOccupancyReport.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1051,372 +1120,373 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/130/vanetWithGapCache_130_AverageHitMessagesReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithGapCache_530_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65474">
-          <caret line="3446" column="65" selection-start-line="3446" selection-start-column="65" selection-end-line="3446" selection-end-column="65" />
+        <state relative-caret-position="239">
+          <caret line="146641" column="14" selection-start-line="146641" selection-start-column="14" selection-end-line="146641" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/130/vanetWithoutCache_130_AverageHitMessagesReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithoutCache_time_530_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71193">
-          <caret line="3747" column="12" selection-start-line="3747" selection-start-column="12" selection-end-line="3747" selection-end-column="12" />
+        <state relative-caret-position="3580436">
+          <caret line="188444" column="17" selection-start-line="188444" selection-start-column="17" selection-end-line="188444" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/130/vanetWithGapCache_130_BufferOccupancyReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithoutCache_time_530_MessageStatsReport.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSR_setting.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithoutCache_630_MessageStatsReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_130_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithGapCache_630_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="27667" column="18" selection-start-line="27667" selection-start-column="18" selection-end-line="27667" selection-end-column="18" />
+        <state relative-caret-position="2963069">
+          <caret line="155951" column="18" selection-start-line="155951" selection-start-column="18" selection-end-line="155951" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_230_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithGapCache_730_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="61325" column="12" selection-start-line="61325" selection-start-column="12" selection-end-line="61325" selection-end-column="18" />
+        <state relative-caret-position="3459292">
+          <caret line="182068" column="18" selection-start-line="182068" selection-start-column="12" selection-end-line="182068" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_330_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/node/vanetWithoutCache_630_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="89868" column="18" selection-start-line="89868" selection-start-column="12" selection-end-line="89868" selection-end-column="18" />
+        <state relative-caret-position="4228108">
+          <caret line="222532" column="18" selection-start-line="222532" selection-start-column="12" selection-end-line="222532" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_430_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/src/util/ZipfDistribution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="114271" column="18" selection-start-line="114271" selection-start-column="18" selection-end-line="114271" selection-end-column="18" />
+        <state relative-caret-position="1007">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_530_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/p_r_gap/vanetWithGapCache_p--r-gap_PReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="146637" column="18" selection-start-line="146637" selection-start-column="12" selection-end-line="146637" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_230_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/p_r_gap/vanetWithGapCache_p--r-gap_P_R_GapReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="91757" column="18" selection-start-line="91757" selection-start-column="12" selection-end-line="91757" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_330_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/p_r_gap/vanetWithGapCache_p--r-gap_DGapReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="139952" column="12" selection-start-line="139952" selection-start-column="12" selection-end-line="139952" selection-end-column="18" />
+        <state relative-caret-position="285">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_430_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/nodeSize/230/vanetWithGapCache_230_AverageHitMessagesReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="158872" column="18" selection-start-line="158872" selection-start-column="12" selection-end-line="158872" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_CacheHitRatioReport.txt">
+    <entry file="file://$PROJECT_DIR$/reports/nodeSize/230/vanetWithGapCache_230_BufferOccupancyReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="188440" column="18" selection-start-line="188440" selection-start-column="12" selection-end-line="188440" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/130/vanetWithGapCache_130_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="3681" column="12" selection-start-line="3681" selection-start-column="12" selection-end-line="3681" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/130/vanetWithoutCache_130_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="4117" column="18" selection-start-line="4117" selection-start-column="12" selection-end-line="4117" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reports/nodeSize/230/vanetWithGapCache_230_CacheHitRatioReport.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="10570" column="18" selection-start-line="10570" selection-start-column="12" selection-end-line="10570" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/230/vanetWithoutCache_230_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="6038" column="18" selection-start-line="6038" selection-start-column="12" selection-end-line="6038" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/330/vanetWithGapCache_330_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="2700" column="18" selection-start-line="2700" selection-start-column="12" selection-end-line="2700" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/330/vanetWithoutCache_330_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3956" column="18" selection-start-line="3956" selection-start-column="12" selection-end-line="3956" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/430/vanetWithGapCache_430_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3882" column="18" selection-start-line="3882" selection-start-column="12" selection-end-line="3882" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/430/vanetWithoutCache_430_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3881" column="18" selection-start-line="3881" selection-start-column="12" selection-end-line="3881" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/530/vanetWithGapCache_530_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="8005" column="12" selection-start-line="8005" selection-start-column="12" selection-end-line="8005" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/nodeSize/530/vanetWithoutCache_530_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="6776" column="18" selection-start-line="6776" selection-start-column="12" selection-end-line="6776" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routing/ActiveRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="195" column="49" selection-start-line="195" selection-start-column="49" selection-end-line="195" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routing/DSRRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="370" column="22" selection-start-line="370" selection-start-column="22" selection-end-line="370" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="299" column="18" selection-start-line="299" selection-start-column="18" selection-end-line="299" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_130_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="20840" column="65" selection-start-line="20840" selection-start-column="48" selection-end-line="20840" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_230_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="44998" column="65" selection-start-line="44998" selection-start-column="48" selection-end-line="44998" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_330_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="64375" column="29" selection-start-line="64375" selection-start-column="12" selection-end-line="64375" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_430_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="80533" column="64" selection-start-line="80533" selection-start-column="47" selection-end-line="80533" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_530_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="102688" column="65" selection-start-line="102688" selection-start-column="48" selection-end-line="102688" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="29941" column="30" selection-start-line="29941" selection-start-column="12" selection-end-line="29941" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_330_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="78471" column="31" selection-start-line="78471" selection-start-column="31" selection-end-line="78471" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_430_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="91815" column="66" selection-start-line="91815" selection-start-column="48" selection-end-line="91815" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="107796" column="29" selection-start-line="107796" selection-start-column="12" selection-end-line="107796" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_430_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="10" selection-end-line="3600" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_330_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_230_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_CacheHitRatioReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="47134" column="18" selection-start-line="47134" selection-start-column="11" selection-end-line="47134" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_230_AverageHitMessagesReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="55310" column="64" selection-start-line="55310" selection-start-column="47" selection-end-line="55310" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_130_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68381">
-          <caret line="3599" column="18" selection-start-line="3599" selection-start-column="11" selection-end-line="3599" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_530_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68400">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_430_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68400">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_330_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68400">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_230_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68400">
-          <caret line="3600" column="18" selection-start-line="3600" selection-start-column="11" selection-end-line="3600" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithGapCache_130_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68400">
-          <caret line="3600" column="13" selection-start-line="3600" selection-start-column="13" selection-end-line="3600" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/DTNHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="249" column="18" selection-start-line="249" selection-start-column="18" selection-end-line="249" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/report/BufferOccupancyReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="91" column="48" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="48" />
+        <state relative-caret-position="1729">
+          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
           <folding>
-            <element signature="e#0#2486#0" expanded="false" />
+            <element signature="e#0#2675#0" expanded="false" />
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/report/MessageLocationReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSRWithGapCache_530.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/report/MessageCopyCountReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routing/DSRWithGapCacheRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="117" column="33" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routing/util/Popularity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSR_cacheSizeNAN.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3116">
+          <caret line="197" column="24" selection-start-line="197" selection-start-column="24" selection-end-line="197" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSR_530.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache5M_AverageHitMessagesReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache5M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32790" column="0" selection-start-line="32790" selection-start-column="0" selection-end-line="32875" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache10M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="41113" column="0" selection-start-line="41001" selection-start-column="0" selection-end-line="41113" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache20M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="44598" column="0" selection-start-line="44479" selection-start-column="0" selection-end-line="44598" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cache50M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="49050" column="0" selection-start-line="48916" selection-start-column="0" selection-end-line="49050" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_cacheNAN_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="48916" column="0" selection-start-line="48916" selection-start-column="0" selection-end-line="49049" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_size130_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="47373" column="7" selection-start-line="47243" selection-start-column="0" selection-end-line="47373" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_size230_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="48257" column="7" selection-start-line="48111" selection-start-column="0" selection-end-line="48257" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_size330_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="49050" column="0" selection-start-line="48916" selection-start-column="0" selection-end-line="49050" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_size430_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="49051" column="7" selection-start-line="48921" selection-start-column="0" selection-end-line="49051" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_size530_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="49381" column="7" selection-start-line="49245" selection-start-column="0" selection-end-line="49381" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithGapCache_time_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="119038" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_cache5M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="33121" column="0" selection-start-line="33034" selection-start-column="0" selection-end-line="33121" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_cache10M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="41274" column="7" selection-start-line="41160" selection-start-column="0" selection-end-line="41274" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_cache20M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="44163" column="0" selection-start-line="44044" selection-start-column="0" selection-end-line="44163" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_cache50M_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="49111" column="7" selection-start-line="48981" selection-start-column="0" selection-end-line="49111" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_cacheNAN_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="49112" column="0" selection-start-line="48981" selection-start-column="0" selection-end-line="49112" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size130_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="47558" column="7" selection-start-line="47426" selection-start-column="0" selection-end-line="47558" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size230_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="923799">
+          <caret line="48621" column="7" selection-start-line="48471" selection-start-column="0" selection-end-line="48621" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSR_setting.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size530_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944281">
+          <caret line="49699" column="7" selection-start-line="49567" selection-start-column="0" selection-end-line="49699" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_time_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938239">
+          <caret line="49381" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="119492" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size430_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940253">
+          <caret line="49487" column="0" selection-start-line="49350" selection-start-column="0" selection-end-line="49487" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/ICNMessageEventGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/redunacy/vanetWithoutCache_size330_MessageCopyCountReport.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930639">
+          <caret line="48981" column="6" selection-start-line="48981" selection-start-column="6" selection-end-line="48981" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ParetoRNG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3135">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="252" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DSRWithGapCache_setting.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/report/CacheHitRatioReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/zipf/vanetWithoutCache_530_BufferOccupancyReport.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63130">
-          <caret line="265" column="44" selection-start-line="265" selection-start-column="44" selection-end-line="265" selection-end-column="44" />
+        <state relative-caret-position="855">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
           <folding />
         </state>
       </provider>

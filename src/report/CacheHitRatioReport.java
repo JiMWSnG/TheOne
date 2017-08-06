@@ -4,12 +4,11 @@
  */
 package report;
 
-import core.DTNHost;
-import core.Message;
-import core.MessageListener;
+import core.*;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,7 +19,7 @@ import java.util.Map;
  * Messages hit during the warm up period are ignored.
  * For output syntax, see {@link #HEADER}.
  */
-public class CacheHitRatioReport extends Report implements MessageListener {
+public class CacheHitRatioReport extends Report implements UpdateListener,MessageListener {
 	public static String HEADER="# time  hit_cache  total_cache  hit_cache/total_cache";
 
 	private Map<String,Double>  cacheHitRatio;
@@ -44,6 +43,13 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 		hitIntNum =new HashMap<String ,Integer>();
 
 		write(HEADER);
+	}
+
+	public void updated(List<DTNHost> hosts) {
+		if (SimClock.getTime()%7200==0) {
+			write(SimClock.getTime()+"-------------------------------------------------------------------------------------done");
+			reportValues();
+		}
 	}
 
 	public void messageTransferred(Message m, DTNHost from, DTNHost to,
@@ -88,6 +94,7 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 //		}
 
 		reportValues();
+
 
 	}
 

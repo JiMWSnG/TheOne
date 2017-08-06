@@ -4,9 +4,7 @@
  */
 package report;
 
-import core.DTNHost;
-import core.Message;
-import core.MessageListener;
+import core.*;
 
 import java.util.List;
 
@@ -15,7 +13,7 @@ import java.util.List;
  * the warm up period are ignored.
  * For output syntax, see {@link #HEADER}.
  */
-public class AverageHitMessagesReport extends Report implements MessageListener {
+public class AverageHitMessagesReport extends Report implements UpdateListener, MessageListener {
 	public static String HEADER = "# deliveryTime  " +
 		"hopCount";
 	private double deliveryTime;
@@ -45,7 +43,14 @@ public class AverageHitMessagesReport extends Report implements MessageListener 
 	private int getPathSize(Message m) {
 		return m.getHops().size();
 	}
-	
+
+	public void updated(List<DTNHost> hosts) {
+		if (SimClock.getTime()%7200==0) {
+			write(SimClock.getTime()+"-------------------------------------------------------------------------------------done");
+			write("averageTime:"+deliveryTime/count+"  "+"averageHopCount:"+(double)hopCount/count);
+		}
+	}
+
 	public void messageTransferred(Message m, DTNHost from, DTNHost to, 
 			boolean firstDelivery) {
 		boolean isInterest = m.getProperty("type")==0;
@@ -61,6 +66,7 @@ public class AverageHitMessagesReport extends Report implements MessageListener 
 //					(ttl != Integer.MAX_VALUE ? ttl : "n/a") +
 //					(m.isResponse() ? " Y " : " N ") + getPathSize(m));
 			write(format(getSimTime() - m.getCreationTime())+" "+getPathSize(m));
+
 		}
 	}
 
