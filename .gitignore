@@ -1,4 +1,22 @@
+# Compiled files
+*.class
 /out
+# Simulation report files
 /reports
+
+
+# Javadocs
+*.html
+doc/stylesheet.css
+doc/resources/*.gif
+doc/package-list
+
+# Eclipse IDE files
+.classpath
+.project
+/target/
+.settings/org.eclipse.*
+
+# Idea IDE files
 /.idea
 *.iml
