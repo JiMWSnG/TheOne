@@ -54,19 +54,19 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 		//00 data的初始化
 		//10 request不是第一次命中
 
-		boolean isInterest = m.getProperty("type")==0;
+		boolean isInterest = (int)m.getProperty("type")==0;
 		if ( isInterest && firstDelivery && !isWarmup() && !isWarmupID(m.getId())) {
 			int unHitNum =0;
 			int hitNum = 0;
 			Collection<Message> messages = to .getMessageCollection();
 			Collection<Message> deliveryMessages = to.getRouter().getDeliveredMessages().values();
 			for(Message mi :messages){
-				if(mi.getProperty("type")==0) {//isInterest
+				if((int)mi.getProperty("type")==0) {//isInterest
 					unHitNum++;
 				}
 			}
 			for(Message mhi:deliveryMessages){
-				if(mhi.getProperty("type")==0) {//isInterest
+				if((int)mhi.getProperty("type")==0) {//isInterest
 					hitNum++;
 				}
 			}
@@ -120,7 +120,7 @@ public class CacheHitRatioReport extends Report implements MessageListener {
 
 	// nothing to implement for the rest
 	public void messageDeleted(Message m, DTNHost where, boolean dropped) {
-		if(m.getProperty("type")==0){
+		if((int)m.getProperty("type")==0){
 			Integer num =deleteInterestNum.get(where.toString());
 			if(num==null)
 				deleteInterestNum.put(where.toString(),1);

@@ -48,7 +48,7 @@ public class AverageHitMessagesReport extends Report implements MessageListener 
 	
 	public void messageTransferred(Message m, DTNHost from, DTNHost to, 
 			boolean firstDelivery) {
-		boolean isInterest = m.getProperty("type")==0;
+		boolean isInterest = (int)m.getProperty("type")==0;
 		if (!isWarmupID(m.getId()) && firstDelivery && isInterest) {
 			this.deliveryTime +=getSimTime() - m.getCreationTime();
 			this.hopCount += getPathSize(m);

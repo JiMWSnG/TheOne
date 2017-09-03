@@ -47,7 +47,7 @@ public class World {
 	/** list of nodes; nodes are indexed by their network address */
 	private List<DTNHost> hosts;
 	private boolean simulateConnections;//Should network layer be updated too
-	/** nodes in the order they should be updated (if the order should be 
+	/** nodes in the order they should be updated (if the order should be
 	 * randomized; null value means that the order should not be randomized) */
 	private ArrayList<DTNHost> updateOrder;
 	/** is cancellation of simulation requested from UI */
@@ -156,7 +156,7 @@ public class World {
 		while (this.nextQueueEventTime <= runUntil) {
 			simClock.setTime(this.nextQueueEventTime);
 			ExternalEvent ee = this.nextEventQueue.nextEvent();
-			ee.processEvent(this);
+			ee.processEvent(this);//usually is a messageEvent;
 			updateHosts(); // update all hosts after every event
 			setNextEventQueue();
 		}

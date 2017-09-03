@@ -51,7 +51,7 @@ public class DSRWithGapCacheRouter extends DSRRouter {
        // boolean isFirstDelivery; // is this first delivered instance of the msg
         boolean isInterest;
 
-        isInterest = aMessage.getProperty("type")==0;
+        isInterest = (int)aMessage.getProperty("type")==0;
         //data 的命中信号
         isFinalRecipient = aMessage.getTo() == this.getHost();
 //        isFirstDelivery = isFinalRecipient &&
@@ -143,7 +143,7 @@ public class DSRWithGapCacheRouter extends DSRRouter {
     @Override
     protected void removePath(Message message) {
         super.removePath(message);
-        boolean isData = message.getProperty("type")==1;
+        boolean isData = (int)message.getProperty("type")==1;
         if(isData){
             int gap = (int)message.getProperty("gc");
             message.updateProperty("gc",--gap);
