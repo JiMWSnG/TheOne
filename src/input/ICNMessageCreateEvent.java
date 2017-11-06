@@ -1,5 +1,6 @@
 package input;
 
+import constant.MessageTypeConstant;
 import core.DTNHost;
 import core.ICNMessage;
 import core.Message;
@@ -16,7 +17,7 @@ public class ICNMessageCreateEvent extends MessageCreateEvent {
     public static final int INTEREST_MESSAGE =  0;
     public static final int DATA_MESSAGE = 1;
     /** 消息类型，分为interest和data两种,m默认为Interest*/
-    private int type=0;
+    private int type= MessageTypeConstant.INTEREST_MESSAGE;
     private String responseMsgName;
     public ICNMessageCreateEvent(int from, int to, String id, int size,
                                  int responseSize, double time,String responseMsgName) {

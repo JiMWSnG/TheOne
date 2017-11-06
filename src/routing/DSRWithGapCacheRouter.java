@@ -1,5 +1,6 @@
 package routing;
 
+import constant.MessageTypeConstant;
 import core.*;
 import input.ICNMessageEventGenerator;
 import report.P_R_GapReport;
@@ -136,14 +137,14 @@ public class DSRWithGapCacheRouter extends DSRRouter {
         res.setRequest(m);
         gap = caculateGap(res);
         res.addProperty("gc",gap);
-        res.addProperty("type",1);
+        res.addProperty("type", MessageTypeConstant.DATA_MESSAGE);
         return this.createNewMessage(res);
     }
 
     @Override
     protected void removePath(Message message) {
         super.removePath(message);
-        boolean isData = (int)message.getProperty("type")==1;
+        boolean isData = (int)message.getProperty("type")==MessageTypeConstant.DATA_MESSAGE;
         if(isData){
             int gap = (int)message.getProperty("gc");
             message.updateProperty("gc",--gap);

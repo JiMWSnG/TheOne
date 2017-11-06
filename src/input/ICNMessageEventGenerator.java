@@ -4,15 +4,10 @@
  */
 package input;
 
-import core.Message;
 import core.Settings;
-import core.SettingsError;
+import distribution.Distribute;
+import distribution.DistributeFactory;
 import util.ParetoRNG;
-import util.Range;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Message creation -external events generator. Creates one  ICNmessage from
@@ -35,7 +30,19 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	//public static final String MESSAGE_TYPE_S = "type";
 	public static final String MESSAGE_RESPONSE_SIZE_S = "responseSize";
 	public static final String MESSAGE_RESPONSE_MSGNAME_S = "responseMsgName";
-	//private int type;
+	/**
+	 * distribution的类型有：Exponential， GenelizedExtreme，LogNormal，Normal，Pareto，
+	 *Weibull
+	 */
+	public static final String MESSAGE_SIZE_DISTRIBUTE = "sizeDistribute";
+	public static final String DISTRIBUTE_PARAM_S = "sizeParams";
+	public static final String INTERVAL_DISTRIBUTE = "intervalDistribute";
+	public static final String INTERVAL_PARAMS = "intervalParams";
+
+	private Distribute msgDistribute;
+	private Distribute intervalDistribute;
+	private boolean isMsgConstant;
+	private boolean isIntervalPeriodic ;
 	private int responseSize;
 	private String responseMsgName;
 
@@ -46,6 +53,23 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	//	this.type = s.getInt(MESSAGE_TYPE_S);
 		this.responseSize = s.getInt(MESSAGE_RESPONSE_SIZE_S,0);
 		this.responseMsgName = s.getSetting(MESSAGE_RESPONSE_MSGNAME_S);
+
+		try{
+			String distribution = s.getSetting(MESSAGE_SIZE_DISTRIBUTE);
+			double[] msgParams = s.getCsvDoubles(DISTRIBUTE_PARAM_S);
+			this.intervalDistribute = DistributeFactory.getInstance(distribution,msgParams);
+			this.isMsgConstant = false;
+		}catch(Exception e){
+			this.isMsgConstant = true;
+		}
+		try{
+			String distribution = s.getSetting(INTERVAL_DISTRIBUTE);
+			double[] intParams = s.getCsvDoubles(INTERVAL_PARAMS);
+			this.msgDistribute = DistributeFactory.getInstance(distribution,intParams);
+			this.isIntervalPeriodic = false;
+		}catch(Exception e){
+			this.isIntervalPeriodic = true;
+		}
 
 
 	}
@@ -59,13 +83,12 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	 */
 	public ExternalEvent nextEvent() {
 
-		int responseSize = this.responseSize; /* zero stands for one way messages */
+		int responseSize ; /* zero stands for one way messages */
 		int msgSize;
 		int interval;
 		int from;
 		String responseMsgName;
-		//int to;
-		//int type = this.type;
+
 
 		/* Get two *different* nodes randomly from the host ranges */
 		from = drawHostAddress(this.hostRange);
@@ -73,6 +96,7 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 
 		msgSize = drawMessageSize();
 		interval = drawNextEventTimeDiff();
+		responseSize = drawResponseMessageSize();
 		//请求的数据的name,应符合zipf分布
 		ParetoRNG paretoRNG = new ParetoRNG(rng,0.5,1,hostRange[1]-hostRange[0]);
 
@@ -87,6 +111,22 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 			this.nextEventsTime = Double.MAX_VALUE;
 		}
 		return mce;
+	}
+
+	protected int drawResponseMessageSize() {
+		if (isMsgConstant){
+			return this.responseSize;
+		}else{
+			return (int) this.msgDistribute.getDouble();
+		}
+	}
+
+	@Override
+	protected int drawNextEventTimeDiff() {
+		if (isIntervalPeriodic){
+			return super.drawNextEventTimeDiff();
+		}
+		return (int)this.intervalDistribute.getDouble();
 	}
 
 }

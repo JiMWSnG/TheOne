@@ -4,6 +4,7 @@
  */
 package routing;
 
+import constant.MessageTypeConstant;
 import core.*;
 import input.ICNMessageCreateEvent;
 
@@ -46,7 +47,7 @@ public class DSRRouter extends ActiveRouter {
     protected List<Message> getInterestMessage() {
         List<Message> interestMessage = new ArrayList<>();
         for (Message m : this.getMessageCollection()) {
-            if (ICNMessageCreateEvent.INTEREST_MESSAGE == (int)m.getProperty("type")) {
+            if (MessageTypeConstant.INTEREST_MESSAGE == (int)m.getProperty("type")) {
                 interestMessage.add(m);
             }
 
@@ -60,7 +61,7 @@ public class DSRRouter extends ActiveRouter {
     protected List<Message> getDeliveryDataMessage() {
         List<Message> dataMessage = new ArrayList<>();
         for (Message m : this.getDeliveredMessages().values()) {
-            if (ICNMessageCreateEvent.DATA_MESSAGE == (int)m.getProperty("type")) {
+            if (MessageTypeConstant.DATA_MESSAGE == (int)m.getProperty("type")) {
                 dataMessage.add(m);
             }
         }
@@ -109,7 +110,7 @@ public class DSRRouter extends ActiveRouter {
     @Override
     protected Message tryAllMessages(Connection con, List<Message> messages) {
         for (Message m : messages) {
-            if (m.getProperty("type") != null && (int)m.getProperty("type") == 1) {//data
+            if (m.getProperty("type") != null && (int)m.getProperty("type") == MessageTypeConstant.DATA_MESSAGE) {//data
                 DTNHost to = con.getOtherNode(getHost());
                 List<DTNHost> path = m.getRequest().getHops();
                 int hopCount = path.size();
@@ -262,7 +263,7 @@ public class DSRRouter extends ActiveRouter {
         Message res = new Message(this.getHost(), m.getFrom(),
                 m.getProperty("responseMsgName").toString(), m.getResponseSize());
         res.setRequest(m.replicate());
-        res.addProperty("type", 1);
+        res.addProperty("type", MessageTypeConstant.DATA_MESSAGE);
 
         return this.createNewMessage(res);
     }
@@ -273,7 +274,7 @@ public class DSRRouter extends ActiveRouter {
      * @param message data message
      */
     protected void removePath(Message message) {
-        if (message.getProperty("type") != null && (int)message.getProperty("type") == 1) {
+        if (message.getProperty("type") != null && (int)message.getProperty("type") == MessageTypeConstant.DATA_MESSAGE) {
             List<DTNHost> path = message.getRequest().getHops();
             if (path.size() >= 1)
                 path.remove(path.size() - 1);

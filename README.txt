@@ -226,7 +226,7 @@ contain some vertex(es) with exactly the same coordinates, the paths are
 joined from those places (this is how you create intersections). WKT files 
 can be edited and generated from real world map data using any suitable 
 Geographic Information System (GIS) program. The map data included in the 
-simulator distribution was converted and edited using the free, Java based 
+simulator msgDistribute was converted and edited using the free, Java based
 OpenJUMP GIS program.
 
 Different map types are defined by storing the paths belonging to different 
@@ -711,7 +711,7 @@ an integer but the ranges are given with two integers with a colon (:) between
 them. If hosts should reply to the messages that they receive, size range of 
 the reply messages can be defined with "-rsizes" option. If a certain random 
 number generator seed should be used, that can be defined with "-seed" option. 
-All random values are drawn from a uniform distribution with inclusive minimum 
+All random values are drawn from a uniform msgDistribute with inclusive minimum
 value and exclusive maximum value. Script outputs commands that are suitable 
 for external events file's contents. You probably want to redirect the output 
 to some file.

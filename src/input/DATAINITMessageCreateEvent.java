@@ -1,5 +1,6 @@
 package input;
 
+import constant.MessageTypeConstant;
 import core.DTNHost;
 import core.Message;
 import core.World;
@@ -12,7 +13,7 @@ public class DATAINITMessageCreateEvent extends MessageCreateEvent {
     public static final int INTEREST_MESSAGE =  0;
     public static final int DATA_MESSAGE = 1;
     /** 消息类型，分为interest和data两种,m默认为Interest*/
-    private int type=1;
+    private int type= MessageTypeConstant.DATA_MESSAGE;
 
     public DATAINITMessageCreateEvent(int from, int to, String id, int size,
                                       int responseSize, double time) {
