@@ -52,10 +52,7 @@ public class Osm2Wkt {
     static int precisonFloating = 3; // use 3 decimals after comma for rounding
     double epsilon = 0.0001;
     String Snum = new String();
-    private boolean isOsm = false;
-    private boolean isWay = false;
-    private long lastStreetId = -1L;
-    private Vector<Long> streetLandMarks = new Vector<>();
+
 
     private class Landmark {
         long id = 0;
@@ -75,6 +72,11 @@ public class Osm2Wkt {
     }
 
     private class OsmHandler extends DefaultHandler {
+        private boolean isOsm = false;
+        private boolean isWay = false;
+        private long lastStreetId = -1L;
+        private Vector<Long> streetLandMarks = new Vector<>();
+        private long num = 0;
         @Override
         public void startDocument() throws SAXException {
 
@@ -84,13 +86,14 @@ public class Osm2Wkt {
         @Override
         public void endDocument() throws SAXException {
 
-            System.out.println("结束解析osm文件/t/n");
             System.out.println("parsing osm found " + streets.size() + " streets and "
                     + landmarks.size() + " landmarks");
         }
 
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+            num++;
+            System.out.print("开始解析第"+num+"条数据");
            //判断root 是否是osm
             if (XML_TAG_OSM.equals(qName)){
                 isOsm = true;
@@ -1173,7 +1176,8 @@ public class Osm2Wkt {
 
         if (filelower.endsWith(FILE_EXT_OSM)) {
 
-            if (!obj.readOsm(file)) return;
+//            if (!obj.readOsm(file)) return;
+            if (!obj.readOsmBySax(file)) return;
             //把经纬度转成坐标，左下角为（0,0）
             if (!obj.transformCoordinates()) return;
             // this is where( simplifyGraph ) the graph is constructed

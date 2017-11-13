@@ -20,18 +20,16 @@ import util.ParetoRNG;
  * created a message.
  * type:interest
  * @see MessageEventGenerator
- * 请求的数据事先初始化好，需要请求数据的name和size
  */
 public class ICNMessageEventGenerator extends MessageEventGenerator {
 	/** Message type range -setting id ({@value}). Can be either a interest
 	 * package or a data package,which is defined by 0 and 1.
 	 *.interest package :0, data package:1.
 	 * Defines the message type . */
-	//public static final String MESSAGE_TYPE_S = "type";
 	public static final String MESSAGE_RESPONSE_SIZE_S = "responseSize";
 	public static final String MESSAGE_RESPONSE_MSGNAME_S = "responseMsgName";
 	/**
-	 * distribution的类型有：Exponential， GenelizedExtreme，LogNormal，Normal，Pareto，
+	 * distribute的类型有：Exponential， GenelizedExtreme，LogNormal，Normal，Pareto，
 	 *Weibull
 	 */
 	public static final String MESSAGE_SIZE_DISTRIBUTE = "sizeDistribute";

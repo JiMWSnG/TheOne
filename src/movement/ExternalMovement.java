@@ -4,20 +4,12 @@
  */
 package movement;
 
+import core.*;
 import input.ExternalMovementReader;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 import util.Tuple;
-
-import core.Coord;
-import core.DTNSim;
-import core.Settings;
-import core.SimClock;
 
 /**
  * Movement model that uses external data of node locations.
@@ -49,6 +41,8 @@ public class ExternalMovement extends MovementModel {
 	private static double nrofPreload = 10;
 	/** minimum number intervals that should be preloaded ahead of sim time */
 	private static final double MIN_AHEAD_INTERVALS = 2;
+	/** 未得到初始化数据的实例*/
+	private static List<ExternalMovement> unInitModels ;
 		
 	/** the very first location of the node */
 	private Coord intialLocation;
@@ -76,7 +70,7 @@ public class ExternalMovement extends MovementModel {
 	 */
 	public ExternalMovement(Settings settings) {
 		super(settings);
-		
+		unInitModels = new ArrayList<>();
 		if (idMapping == null) {
 			// run these the first time object is created or after reset call
 			Settings s = new Settings(EXTERNAL_MOVEMENT_NS);
@@ -88,7 +82,8 @@ public class ExternalMovement extends MovementModel {
 			initTime = reader.getLastTimeStamp();
 			samplingInterval = -1;
 			lastPreloadTime = -1;
-			
+
+
 			s.setNameSpace(EXTERNAL_MOVEMENT_NS);
 			if (s.contains(NROF_PRELOAD_S)) {
 				nrofPreload = s.getInt(NROF_PRELOAD_S);
@@ -112,21 +107,42 @@ public class ExternalMovement extends MovementModel {
 		
 		if (initLocations.size() > 0) { // we have location data left
 			// gets a new location from the list
-			Tuple<String, Coord> initLoc = initLocations.remove(0); 
-			this.intialLocation = this.latestLocation = initLoc.getValue();
-			this.latestPathStartTime = initTime;
-			
-			// puts the new model to model map for later updates
-			idMapping.put(initLoc.getKey(), this);
-			isActive = true;
+			Tuple<String, Coord> initLoc = initLocations.remove(0);
+			assignLocation(this, initLoc, initTime);
 		}
 		else {
 			// no more location data left for the new node -> set inactive
+			//有了新id数据以后在 Set isActive = true
 			this.intialLocation = DEF_INIT_LOC;
 			isActive = false;
+			unInitModels.add(this);
 		}		
 	}
-	
+
+	/**
+	 * jim wang
+	 * @param externalMovement
+	 */
+	private static void  addUinitModel(ExternalMovement externalMovement){
+		unInitModels.add(externalMovement);
+	}
+
+	/**
+	 * 移动模型的初始化
+	 * jim wang
+	 * @param em
+	 * @param initLoc
+	 * @param time
+	 * @return
+	 */
+	private static ExternalMovement assignLocation(ExternalMovement em,  Tuple<String, Coord> initLoc, double time){
+		em.intialLocation = em.latestLocation = initLoc.getValue();
+		em.latestPathStartTime = time;
+		// puts the new model to model map for later updates
+		idMapping.put(initLoc.getKey(), em);
+		em.isActive = true;
+		return em;
+	}
 	/**
 	 * Checks if more paths should be preloaded and preloads them if
 	 * needed.
@@ -180,8 +196,15 @@ public class ExternalMovement extends MovementModel {
 		if (latestPath == null) {
 			latestPath = new Path();			
 		}
-			
-		double speed = loc.distance(this.latestLocation) / samplingInterval;		
+			//jim wang 修改了speed的计算方式
+		double speed = 0d;
+		if (loc instanceof SpeedCoord){
+
+			speed = ((SpeedCoord) loc).getSpeed();
+		}else{
+			speed = loc.distance(this.latestLocation) / samplingInterval;
+
+		}
 		latestPath.addWaypoint(loc, speed);
 
 		this.latestLocation = loc;
@@ -244,11 +267,15 @@ public class ExternalMovement extends MovementModel {
 	 * were read.
 	 */
 	private static double readMorePaths() {
+		double oldTime = reader.getLastTimeStamp();
 		List<Tuple<String, Coord>> list = reader.readNextMovements();
 		double time = reader.getLastTimeStamp();
-		
+
+		//update samplingInterval
 		if (samplingInterval == -1) {
 			samplingInterval = time - initTime;
+		}else{
+			samplingInterval = time -oldTime;
 		}
 		
 		for (Tuple<String, Coord> t : list) {
@@ -256,6 +283,10 @@ public class ExternalMovement extends MovementModel {
 			if (em != null) { // skip unknown IDs, i.e. IDs not mentioned in...
 				// ...init phase or if there are more IDs than nodes
 				em.addLocation(t.getValue(), time);
+			}else{
+				//给未分配数据的移动模型初始化
+				 ExternalMovement unEm = unInitModels.remove(0);
+				 assignLocation(unEm, t, time);
 			}
 		}
 		

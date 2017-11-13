@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import core.SpeedCoord;
 import util.Tuple;
 
 import core.Coord;
@@ -33,7 +34,7 @@ import core.SettingsError;
  * </P>
  * <P>
  * All lines must be sorted by time. Sampling interval (time difference between
- * two time instances) must be same for the whole file.
+ * two time instances) must not be same for the whole file.
  * </P>
  */
 public class ExternalMovementReader {
@@ -49,6 +50,7 @@ public class ExternalMovementReader {
 	private double minY;
 	private double maxY;
 	private boolean normalize;
+
 
 		
 	/**
@@ -111,6 +113,7 @@ public class ExternalMovementReader {
 		String id = lineScan.next();
 		double x = lineScan.nextDouble();
 		double y = lineScan.nextDouble();
+		double speed = lineScan.nextDouble();
 		
 		if (normalize) {
 			time -= minTime;
@@ -129,7 +132,7 @@ public class ExternalMovementReader {
 			}
 						
 			// add previous line's tuple
-			moves.add(new Tuple<String, Coord>(id, new Coord(x,y)));		
+			moves.add(new Tuple<String, Coord>(id, new SpeedCoord(x,y,speed)));
 
 			lineScan = new Scanner(lastLine);
 			
@@ -138,6 +141,7 @@ public class ExternalMovementReader {
 				id = lineScan.next();
 				x = lineScan.nextDouble();
 				y = lineScan.nextDouble();
+				speed = lineScan.nextDouble();
 			} catch (Exception e) {
 				throw new SettingsError("Invalid line '" + lastLine + "'");
 			}
@@ -150,7 +154,7 @@ public class ExternalMovementReader {
 		}
 		
 		if (!scanner.hasNextLine()) {	// add the last tuple of the file
-			moves.add(new Tuple<String, Coord>(id, new Coord(x,y)));
+			moves.add(new Tuple<String, Coord>(id, new SpeedCoord(x,y,speed)));
 		}
 		
 		return moves;
