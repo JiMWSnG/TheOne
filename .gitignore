@@ -20,3 +20,4 @@ doc/package-list
 # Idea IDE files
 /.idea
 *.iml
+cologne.rou.xml
