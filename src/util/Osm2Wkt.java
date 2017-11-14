@@ -93,7 +93,7 @@ public class Osm2Wkt {
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             num++;
-            System.out.print("开始解析第"+num+"条数据");
+//            System.out.print("开始解析第"+num+"条数据");
            //判断root 是否是osm
             if (XML_TAG_OSM.equals(qName)){
                 isOsm = true;
