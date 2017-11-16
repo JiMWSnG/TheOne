@@ -4,9 +4,11 @@
  */
 package routing;
 
+import constant.HostTypeContanst;
 import constant.MessageTypeConstant;
 import core.*;
 import input.ICNMessageCreateEvent;
+import util.Tuple;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -81,6 +83,11 @@ public class DSRRouter extends ActiveRouter {
         if (isTransferring() || !canStartTransfer()) {
             return; // transferring, don't try other connections yet
         }
+        // 查找一跳能到达的message和connection，并发送，重写了requestDeliverableMessages
+        // 和getMessagesForConnected函数
+        if (exchangeDeliverableMessages() != null) {
+            return; // started a transfer, don't try others (yet)
+        }
         // then try any/all message to any/all connection
         this.tryAllMessagesToAllConnections();
     }
@@ -129,6 +136,56 @@ public class DSRRouter extends ActiveRouter {
         }
 
         return null; // no message was accepted
+    }
+
+    //请求直接能到达的message
+    // 两种情况  ：
+    // 1. response data到达目的地
+    // 2. 本节点是基站
+       @Override
+    public boolean requestDeliverableMessages(Connection con) {
+        if (isTransferring()) {
+            return false;
+        }
+
+        DTNHost other = con.getOtherNode(getHost());
+		/* do a copy to avoid concurrent modification exceptions
+		 * (startTransfer may remove messages) */
+        ArrayList<Message> temp =
+                new ArrayList<Message>(this.getMessageCollection());
+        boolean isBaseStation = getHost().toString().startsWith(HostTypeContanst.BASESTATION);
+        for (Message m : temp) {
+            if (isBaseStation || other == m.getTo()  ) {
+                if (startTransfer(m, con) == RCV_OK) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    //查找能直接到达目的地的messages和connections，模拟基站需要重写该func
+    @Override
+    protected List<Tuple<Message, Connection>> getMessagesForConnected() {
+        if (getNrofMessages() == 0 || getConnections().size() == 0) {
+			/* no messages -> empty list */
+            return new ArrayList<Tuple<Message, Connection>>(0);
+        }
+
+        List<Tuple<Message, Connection>> forTuples =
+                new ArrayList<Tuple<Message, Connection>>();
+        for (Message m : getMessageCollection()) {
+            for (Connection con : getConnections()) {
+                DTNHost to = con.getOtherNode(getHost());
+                String name = to.toString();
+                //判断到达目的地
+                if (name.startsWith(HostTypeContanst.BASESTATION)) {
+                    forTuples.add(new Tuple<Message, Connection>(m,con));
+                }
+            }
+        }
+
+        return forTuples;
     }
 
     /**

@@ -67,20 +67,28 @@ public class ExternalMovementReader {
 			throw new SettingsError("Couldn't find external movement input " +
 					"file " + inFile);
 		}
-		
-		String offsets = scanner.nextLine();
-	
-		try {
-			Scanner lineScan = new Scanner(offsets);
-			minTime = lineScan.nextDouble();
-			maxTime = lineScan.nextDouble();
-			minX = lineScan.nextDouble();
-			maxX = lineScan.nextDouble();
-			minY = lineScan.nextDouble();
-			maxY = lineScan.nextDouble();
-		} catch (Exception e) {
-			throw new SettingsError("Invalid offset line '" + offsets + "'");
-		}
+		//情急之下做的权宜之计
+		//TODO:情急之下做的权宜之计，若需求改变就要改回去
+			minTime =3627d;
+			maxTime = 86399d;
+			minX = 2939.788409739032;
+			maxX = 29475.209189571982;
+			minY = 847.1889671207618;
+			maxY = 32189.824003127083;
+		//下面注释的是原来的代码
+		// 		String offsets = scanner.nextLine();
+//
+//		try {
+//			Scanner lineScan = new Scanner(offsets);
+//			minTime = lineScan.nextDouble();
+//			maxTime = lineScan.nextDouble();
+//			minX = lineScan.nextDouble();
+//			maxX = lineScan.nextDouble();
+//			minY = lineScan.nextDouble();
+//			maxY = lineScan.nextDouble();
+//		} catch (Exception e) {
+//			throw new SettingsError("Invalid offset line '" + offsets + "'");
+//		}
 		
 		lastLine = scanner.nextLine();
 	}
