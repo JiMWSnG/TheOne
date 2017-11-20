@@ -285,8 +285,10 @@ public class ExternalMovement extends MovementModel {
 				em.addLocation(t.getValue(), time);
 			}else{
 				//给未分配数据的移动模型初始化
-				 ExternalMovement unEm = unInitModels.remove(0);
-				 assignLocation(unEm, t, time);
+				if	(unInitModels.size() > 0){
+					ExternalMovement unEm = unInitModels.remove(0);
+					assignLocation(unEm, t, time);
+				}
 			}
 		}
 		

@@ -21,3 +21,4 @@ doc/package-list
 /.idea
 *.iml
 cologne.rou.xml
+/koln.tr*

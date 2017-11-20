@@ -4,6 +4,7 @@
  */
 package input;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import core.Settings;
 import distribution.Distribute;
 import distribution.DistributeFactory;
@@ -34,8 +35,13 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	 */
 	public static final String MESSAGE_SIZE_DISTRIBUTE = "sizeDistribute";
 	public static final String DISTRIBUTE_PARAM_S = "sizeParams";
+	public static final String UNIT_LOCATOR = "unitLocator";
 	public static final String INTERVAL_DISTRIBUTE = "intervalDistribute";
 	public static final String INTERVAL_PARAMS = "intervalParams";
+	/*消息种类*/
+	public static final String TYPE_SIZE = "typeSize";
+	public static final String ISMSGCONSTANT ="isMsgConstant";
+	public static final String ISINTERVALPERIODIC ="isIntervalPeriodic";
 
 	private Distribute msgDistribute;
 	private Distribute intervalDistribute;
@@ -43,6 +49,8 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	private boolean isIntervalPeriodic ;
 	private int responseSize;
 	private String responseMsgName;
+	private int typeSize;
+	private int locator;
 
 
 
@@ -51,24 +59,20 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 	//	this.type = s.getInt(MESSAGE_TYPE_S);
 		this.responseSize = s.getInt(MESSAGE_RESPONSE_SIZE_S,0);
 		this.responseMsgName = s.getSetting(MESSAGE_RESPONSE_MSGNAME_S);
-
-		try{
+		this.typeSize = s.getInt(TYPE_SIZE, 100);
+		this.isMsgConstant = s.getBoolean(ISMSGCONSTANT, true);
+		this.isIntervalPeriodic = s.getBoolean(ISINTERVALPERIODIC, true);
+		this.locator =s.getInt(UNIT_LOCATOR, 1);
+		if (!isMsgConstant){
 			String distribution = s.getSetting(MESSAGE_SIZE_DISTRIBUTE);
 			double[] msgParams = s.getCsvDoubles(DISTRIBUTE_PARAM_S);
-			this.intervalDistribute = DistributeFactory.getInstance(distribution,msgParams);
-			this.isMsgConstant = false;
-		}catch(Exception e){
-			this.isMsgConstant = true;
+			this.msgDistribute = DistributeFactory.getInstance(distribution,msgParams);
 		}
-		try{
+		if (!isIntervalPeriodic){
 			String distribution = s.getSetting(INTERVAL_DISTRIBUTE);
 			double[] intParams = s.getCsvDoubles(INTERVAL_PARAMS);
-			this.msgDistribute = DistributeFactory.getInstance(distribution,intParams);
-			this.isIntervalPeriodic = false;
-		}catch(Exception e){
-			this.isIntervalPeriodic = true;
+			this.intervalDistribute = DistributeFactory.getInstance(distribution,intParams);
 		}
-
 
 	}
 //	protected  int drawMessageType(){
@@ -87,16 +91,15 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 		int from;
 		String responseMsgName;
 
-
-		/* Get two *different* nodes randomly from the host ranges */
+		//在哪个节点产生，随机
 		from = drawHostAddress(this.hostRange);
 
 
 		msgSize = drawMessageSize();
 		interval = drawNextEventTimeDiff();
-		responseSize = drawResponseMessageSize();
-		//请求的数据的name,应符合zipf分布
-		ParetoRNG paretoRNG = new ParetoRNG(rng,0.5,1,hostRange[1]-hostRange[0]);
+		responseSize = locator*drawResponseMessageSize();
+		//请求的数据的种类,应符合zipf分布
+		ParetoRNG paretoRNG = new ParetoRNG(rng,0.5,1,typeSize);
 
 		responseMsgName =this.responseMsgName+(int)Math.floor(paretoRNG.getDouble());
 		/* Create event and advance to next event */

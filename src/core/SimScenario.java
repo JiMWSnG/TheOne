@@ -60,6 +60,8 @@ public class SimScenario implements Serializable {
 	public static final String GROUP_ID_S = "groupID";
 	/** number of hosts in the group -setting id ({@value})*/
 	public static final String NROF_HOSTS_S = "nrofHosts";
+	/** number of hosts in the group -setting id ({@value})*/
+	public static final String NROF_HOSTS_INIT = "nrofInit";
 	/** movement model class -setting id ({@value})*/
 	public static final String MOVEMENT_MODEL_S = "movementModel";
 	/** router class -setting id ({@value})*/
@@ -321,6 +323,9 @@ public class SimScenario implements Serializable {
 			s.setSecondaryNamespace(GROUP_NS);
 			String gid = s.getSetting(GROUP_ID_S);
 			int nrofHosts = s.getInt(NROF_HOSTS_S);
+			if	(s.getInt(NROF_HOSTS_INIT, -1) > 0){
+				nrofHosts = s.getInt(NROF_HOSTS_INIT);
+			}
 			int nrofInterfaces = s.getInt(NROF_INTERF_S);
 			int appCount;
 

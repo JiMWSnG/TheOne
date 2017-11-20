@@ -15,12 +15,13 @@ import routing.util.RoutingInfo;
  * A DTN capable host.
  */
 public class DTNHost implements Comparable<DTNHost> {
+	public static int staticThreadhold = 20;
 	private static int nextAddress = 0;
 	private int address;
 
 	private Coord location; 	// where is the host
 	private Coord destination;	// where is it going
-
+	private int keepStatic ;//节点更新时连续保持不动的次数
 	private MessageRouter router;
 	private MovementModel movement;
 	private Path path;
@@ -92,6 +93,7 @@ public class DTNHost implements Comparable<DTNHost> {
 			}
 		}
 		this.PIT = new HashSet<Map<String,Object>>();
+		this.keepStatic = 0;
 	}
 	
 	/**
@@ -282,6 +284,10 @@ public class DTNHost implements Comparable<DTNHost> {
 		return ni;
 	}
 
+	public boolean isStatic(){
+		return keepStatic >= staticThreadhold;
+	}
+
 	/**
 	 * Find the network interface based on the interfacetype
 	 */
@@ -389,6 +395,11 @@ public class DTNHost implements Comparable<DTNHost> {
 			if (!setNextWaypoint()) {
 				return;
 			}
+		}
+		if (this.location.equals(this.destination)){
+			keepStatic++;
+		}else{
+			keepStatic = 0;
 		}
 
 		possibleMovement = timeIncrement * speed;

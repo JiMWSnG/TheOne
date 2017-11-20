@@ -416,5 +416,16 @@ public abstract class Report {
 		E_X = sum / values.size();
 		return format(sum2/values.size() - (E_X*E_X));
 	}
-	
+
+	public double getLastReportTime() {
+		return lastReportTime;
+	}
+
+	public String getOutFileName() {
+		return outFileName;
+	}
+
+	public void setOutFileName(String outFileName) {
+		this.outFileName = outFileName;
+	}
 }

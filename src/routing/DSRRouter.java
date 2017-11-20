@@ -239,8 +239,10 @@ public class DSRRouter extends ActiveRouter {
             if (dataMessages != null && dataMessages.size() != 0) {
                 for (Message m : dataMessages) {
                     isFinalRecipient = isFinalRecipient | m.getId().equals(aMessage.getProperty("responseMsgName").toString());
-
                 }
+            }
+            if (this.getHost().toString().startsWith(HostTypeContanst.BASESTATION)){
+                isFinalRecipient = true;
             }
 
 

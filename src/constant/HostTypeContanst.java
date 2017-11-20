@@ -7,4 +7,5 @@ package constant;
 public class HostTypeContanst {
     //基站的groupId
     public static final String BASESTATION = "BS";
+    public static final String CAR = "C";
 }
