@@ -11,12 +11,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import movement.ExternalMovement;
 import movement.MapBasedMovement;
 import movement.MovementModel;
 import movement.map.SimMap;
 import routing.MessageRouter;
 
-/**
+/**a
  * A simulation scenario used for getting and storing the settings of a
  * simulation run.
  */
@@ -340,7 +341,11 @@ public class SimScenario implements Serializable {
 			/* checks that these values are positive (throws Error if not) */
 			s.ensurePositiveValue(nrofHosts, NROF_HOSTS_S);
 			s.ensurePositiveValue(nrofInterfaces, NROF_INTERF_S);
-			DTNHostManager hostManager = new DTNHostManager();
+			DTNHostManager hostManager = new DTNHostManager(this.messageListeners, this.movementListeners, gid, interfaces,
+					mmProto, mRouterProto, this.world);
+			if (mmProto instanceof ExternalMovement){
+				ExternalMovement.dtnhostmanager = hostManager;
+			}
 			// setup interfaces
 			for (int j=1;j<=nrofInterfaces;j++) {
 				String intName = s.getSetting(INTERFACENAME_S + j);

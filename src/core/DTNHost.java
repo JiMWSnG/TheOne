@@ -606,4 +606,8 @@ public class DTNHost implements Comparable<DTNHost> {
 		return newMessage;
 
 	}
+
+	public MovementModel getMovement() {
+		return movement;
+	}
 }

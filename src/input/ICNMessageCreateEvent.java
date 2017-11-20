@@ -1,13 +1,12 @@
 package input;
 
 import constant.MessageTypeConstant;
-import core.DTNHost;
-import core.ICNMessage;
-import core.Message;
-import core.World;
+import core.*;
 
 import java.lang.reflect.Type;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Jim Wang on 2016/12/25.
@@ -19,11 +18,14 @@ public class ICNMessageCreateEvent extends MessageCreateEvent {
     /** 消息类型，分为interest和data两种,m默认为Interest*/
     private int type= MessageTypeConstant.INTEREST_MESSAGE;
     private String responseMsgName;
+    private  static Random rng = new Random();
     public ICNMessageCreateEvent(int from, int to, String id, int size,
                                  int responseSize, double time,String responseMsgName) {
         super(from, to, id, size, responseSize, time);
         //this.type = type;
         this.responseMsgName =responseMsgName;
+        /* if prefix is unique, so will be the rng's sequence */
+
     }
     public int getType() {
         return type;
@@ -39,7 +41,8 @@ public class ICNMessageCreateEvent extends MessageCreateEvent {
     public void processEvent(World world) {
 
        // DTNHost to = null;
-        DTNHost from = world.getNodeByAddress(this.fromAddr);
+        List<DTNHost> hosts = world.getHosts();
+        DTNHost from = getNodeByAddress( hosts, this.fromAddr);
         int size = this.getSize();
 //        if(type==INTEREST_MESSAGE){
 //            to =null;
@@ -67,4 +70,14 @@ public class ICNMessageCreateEvent extends MessageCreateEvent {
         return super.toString() + " [" + fromAddr + "->" + toAddr + "] " +
                 "size:" + this.getSize() +"type:" + type + " CREATE";
     }
+    private DTNHost getNodeByAddress(List<DTNHost> hosts,int address){
+        if (address < 0 || address >= hosts.size()) {
+           address = rng.nextInt(hosts.size());
+        }
+
+        DTNHost node = hosts.get(address);
+               return node;
+
+    }
+
 }
