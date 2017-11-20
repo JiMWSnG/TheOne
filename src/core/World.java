@@ -142,16 +142,7 @@ public class World {
 		this.nextEventQueue = nextQueue;
 		this.nextQueueEventTime = earliest;
 	}
-//去掉精致的节点，基站除外
-	private void removeStaticHost(){
-		List<DTNHost> removeHosts = new ArrayList<>();
-		for(DTNHost host : this.hosts){
-			if (host.toString().startsWith(HostTypeContanst.CAR) && host.isStatic()){
-				removeHosts.add(host);
-			}
-		}
-		this.hosts.removeAll(removeHosts);
-	}
+
 
 	/** 
 	 * Update (move, connect, disconnect etc.) all hosts in the world.

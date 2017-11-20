@@ -340,7 +340,7 @@ public class SimScenario implements Serializable {
 			/* checks that these values are positive (throws Error if not) */
 			s.ensurePositiveValue(nrofHosts, NROF_HOSTS_S);
 			s.ensurePositiveValue(nrofInterfaces, NROF_INTERF_S);
-
+			DTNHostManager hostManager = new DTNHostManager();
 			// setup interfaces
 			for (int j=1;j<=nrofInterfaces;j++) {
 				String intName = s.getSetting(INTERFACENAME_S + j);
