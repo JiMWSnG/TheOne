@@ -130,4 +130,8 @@ public class ICNMessageEventGenerator extends MessageEventGenerator {
 		return (int)this.intervalDistribute.getDouble();
 	}
 
+	@Override
+	protected int drawHostAddress(int[] hostRange) {
+		return super.drawHostAddress(hostRange);
+	}
 }

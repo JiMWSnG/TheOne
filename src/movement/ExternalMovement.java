@@ -21,7 +21,9 @@ public class ExternalMovement extends MovementModel {
 	public static final String MOVEMENT_FILE_S = "file";
 	/** number of preloaded intervals per preload run -setting id ({@value})*/
 	public static final String NROF_PRELOAD_S = "nrofPreload";
-	
+
+
+	public static  DTNHostManager dtnhostmanager = null ;
 	/** default initial location for excess nodes */
 	private static final Coord DEF_INIT_LOC = new Coord(0,0);
 	private static ExternalMovementReader reader;
@@ -284,11 +286,17 @@ public class ExternalMovement extends MovementModel {
 				// ...init phase or if there are more IDs than nodes
 				em.addLocation(t.getValue(), time);
 			}else{
+				//新的id
 				//给未分配数据的移动模型初始化
+				ExternalMovement unEm ;
 				if	(unInitModels.size() > 0){
-					ExternalMovement unEm = unInitModels.remove(0);
-					assignLocation(unEm, t, time);
+					unEm = unInitModels.remove(0);
+				}else{
+					DTNHost newHost = dtnhostmanager.createHost();
+					dtnhostmanager.getWorld().getHosts().add(newHost);
+					unEm =  (ExternalMovement) newHost.getMovement();
 				}
+				assignLocation(unEm, t, time);
 			}
 		}
 		

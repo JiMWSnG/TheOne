@@ -1,10 +1,8 @@
 package core;
 
-import constant.HostTypeContanst;
 import movement.MovementModel;
 import routing.MessageRouter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,16 +16,25 @@ public class DTNHostManager {
     private List<MovementListener> movementListeners;
     private String gid;
     private List<NetworkInterface> interfaces;
-    private ModuleCommunicationBus comBus;
     private MovementModel mmProto;
     private MessageRouter mRouterProto;
     private World world;
 
-    public DTNHostManager(){
+    public DTNHostManager( List<MessageListener> messageListeners,
+                           List<MovementListener> movementListeners,	String gid, List<NetworkInterface> interfaces,
+                           MovementModel  mmProto, MessageRouter mRouterProto,World world){
+        this.messageListeners = messageListeners;
+        this.movementListeners = movementListeners;
+        this.gid = gid;
+        this.interfaces = interfaces;
+        this.mmProto = mmProto;
+        this.mRouterProto = mRouterProto;
+        this.world = world;
 
     }
 
     public DTNHost createHost(){
+        ModuleCommunicationBus comBus = new ModuleCommunicationBus();
         DTNHost host = new DTNHost(this.messageListeners,
                 this.movementListeners,	gid, interfaces, comBus,
                 mmProto, mRouterProto);
@@ -35,18 +42,34 @@ public class DTNHostManager {
         return host;
     }
     public void removeHost(){
-        removeStaticHost();
-    }
-    //去掉精致的节点，基站除外
-    private void removeStaticHost(){
-        List<DTNHost> removeHosts = new ArrayList<>();
-        for(DTNHost host : this.world.getHosts()){
-            if (host.toString().startsWith(HostTypeContanst.CAR) && host.isStatic()){
-                removeHosts.add(host);
-            }
-        }
-        this.world.getHosts().removeAll(removeHosts);
+
     }
 
+    public List<MessageListener> getMessageListeners() {
+        return messageListeners;
+    }
 
+    public List<MovementListener> getMovementListeners() {
+        return movementListeners;
+    }
+
+    public String getGid() {
+        return gid;
+    }
+
+    public List<NetworkInterface> getInterfaces() {
+        return interfaces;
+    }
+
+    public MovementModel getMmProto() {
+        return mmProto;
+    }
+
+    public MessageRouter getmRouterProto() {
+        return mRouterProto;
+    }
+
+    public World getWorld() {
+        return world;
+    }
 }

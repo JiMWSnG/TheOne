@@ -8,6 +8,7 @@ import constant.HostTypeContanst;
 import input.EventQueue;
 import input.ExternalEvent;
 import input.ScheduledUpdatesQueue;
+import movement.ExternalMovement;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -275,5 +276,19 @@ public class World {
 	 */
 	public void scheduleUpdate(double simTime) {
 		scheduledUpdates.addUpdate(simTime);
+	}
+
+	//去掉精致的节点，基站除外
+	private void removeStaticHost(){
+		List<DTNHost> removeHosts = new ArrayList<>();
+		for(DTNHost host : this.hosts){
+			if (host.getMovement() == null){
+				System.out.print("debug    movement 未初始化");
+			}
+			if ((host.getMovement() instanceof ExternalMovement) && host.isStatic()){
+				removeHosts.add(host);
+			}
+		}
+		this.hosts.removeAll(removeHosts);
 	}
 }
