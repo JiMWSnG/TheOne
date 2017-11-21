@@ -295,6 +295,9 @@ public class ExternalMovement extends MovementModel {
 					DTNHost newHost = dtnhostmanager.createHost();
 					dtnhostmanager.getWorld().getHosts().add(newHost);
 					unEm =  (ExternalMovement) newHost.getMovement();
+					if (unInitModels.size() > 0){
+						unInitModels.remove(0);
+					}
 				}
 				assignLocation(unEm, t, time);
 			}

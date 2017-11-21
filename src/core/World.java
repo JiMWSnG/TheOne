@@ -291,4 +291,12 @@ public class World {
 		}
 		this.hosts.removeAll(removeHosts);
 	}
+
+	public ArrayList<DTNHost> getUpdateOrder() {
+		return updateOrder;
+	}
+
+	public void setUpdateOrder(ArrayList<DTNHost> updateOrder) {
+		this.updateOrder = updateOrder;
+	}
 }

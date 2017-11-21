@@ -7,6 +7,11 @@ package movement;
 import core.Coord;
 import core.Settings;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  * A dummy stationary "movement" model where nodes do not move.
  * Might be useful for simulations with only external connection events. 
@@ -14,7 +19,11 @@ import core.Settings;
 public class StationaryMovement extends MovementModel {
 	/** Per node group setting for setting the location ({@value}) */
 	public static final String LOCATION_S = "nodeLocation";
+	public static final String ROUTE_FILE = "routeFile";
+
 	private Coord loc; /** The location of the nodes */
+	private  static int num;
+	private static List<Coord> locations = new ArrayList<>();
 	
 	/**
 	 * Creates a new movement model based on a Settings object's settings.
@@ -22,10 +31,13 @@ public class StationaryMovement extends MovementModel {
 	 */
 	public StationaryMovement(Settings s) {
 		super(s);
+		this.num = 0;
 		int coords[];
-		
-		coords = s.getCsvInts(LOCATION_S, 2);
-		this.loc = new Coord(coords[0],coords[1]);
+		String fileName = s.getSetting(ROUTE_FILE);
+		readLine(fileName);
+//		coords = s.getCsvInts(LOCATION_S, 2);
+		Coord c = locations.get(num++);
+		this.loc = new Coord(c.getX(), c.getY());
 	}
 	
 	/**
@@ -34,7 +46,8 @@ public class StationaryMovement extends MovementModel {
 	 */
 	public StationaryMovement(StationaryMovement sm) {
 		super(sm);
-		this.loc = sm.loc;
+		Coord c = locations.get(num++);
+		this.loc = new Coord(c.getX(), c.getY());
 	}
 	
 	/**
@@ -65,6 +78,21 @@ public class StationaryMovement extends MovementModel {
 	@Override
 	public StationaryMovement replicate() {
 		return new StationaryMovement(this);
+	}
+	private void readLine(String fileName){
+		try{
+
+			Scanner sc = new Scanner(new File(fileName));
+			while (sc.hasNext()){
+				String line = sc.nextLine();
+				String[] locationStr = line.split(" ");
+				double x = Double.valueOf(locationStr[0]);
+				double y = Double.valueOf(locationStr[1]);
+				locations.add(new Coord(x, y));
+			}
+		}catch(	Exception e){
+
+		}
 	}
 
 }

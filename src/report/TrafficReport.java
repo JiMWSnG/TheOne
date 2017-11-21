@@ -14,7 +14,7 @@ public class TrafficReport extends Report implements MessageListener {
     public static String HEADER = "# time  upstreamTraffic  downstreamTraffic ";
 
     public static final String DTNHOST_NAME = "host";
-    public static final String INTERVAL = "interval";
+    public static final String INTERVAL = "samplingInterval";
     public static int num = 0;
     private double time;
     private double upstreamTraffic;
@@ -26,12 +26,14 @@ public class TrafficReport extends Report implements MessageListener {
     private int interval;
 
 
-    public TrafficReport(int hostId){
+    public TrafficReport(){
         super();
         Settings s = getSettings();
         if (s.contains(DTNHOST_NAME)) {
             this.hostName = s.getCsvSetting(DTNHOST_NAME)[num++];
-            setOutFileName(this.hostName + getOutFileName());
+            String outFileName = getOutFileName();
+            outFileName = outFileName.substring(0, outFileName.length()-4);
+            setOutFileName(outFileName+this.hostName+OUT_SUFFIX);
         }
         this.interval = s.getInt(INTERVAL);
         init();

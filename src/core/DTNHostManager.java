@@ -3,6 +3,7 @@ package core;
 import movement.MovementModel;
 import routing.MessageRouter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,6 +40,8 @@ public class DTNHostManager {
                 this.movementListeners,	gid, interfaces, comBus,
                 mmProto, mRouterProto);
         world.getHosts().add(host);
+       world.setUpdateOrder(new ArrayList<>(  world.getHosts()));
+
         return host;
     }
     public void removeHost(){
@@ -72,4 +75,9 @@ public class DTNHostManager {
     public World getWorld() {
         return world;
     }
+
+    public void setWorld(World world) {
+        this.world = world;
+    }
+
 }

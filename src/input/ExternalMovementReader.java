@@ -71,9 +71,11 @@ public class ExternalMovementReader {
 		//TODO:情急之下做的权宜之计，若需求改变就要改回去
 			minTime =3627d;
 			maxTime = 86399d;
-			minX = 2939.788409739032;
+			minX = 0;
+//			minX = 2939.788409739032;
 			maxX = 29475.209189571982;
-			minY = 847.1889671207618;
+//			minY = 847.1889671207618;
+			minY = 0;
 			maxY = 32189.824003127083;
 		//下面注释的是原来的代码
 		// 		String offsets = scanner.nextLine();
