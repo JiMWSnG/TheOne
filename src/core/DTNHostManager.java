@@ -24,7 +24,7 @@ public class DTNHostManager {
     private World world;
 
     public DTNHostManager(){
-        
+
     }
 
     public DTNHost createHost(){
