@@ -10,8 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static javafx.scene.input.KeyCode.R;
-
 /**
  * Created by Jim Wang on 2016/12/28.
  */
