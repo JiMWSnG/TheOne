@@ -36,7 +36,7 @@ public class StationaryMovement extends MovementModel {
 		String fileName = s.getSetting(ROUTE_FILE);
 		readLine(fileName);
 //		coords = s.getCsvInts(LOCATION_S, 2);
-		Coord c = locations.get(num++);
+		Coord c = locations.get(num);
 		this.loc = new Coord(c.getX(), c.getY());
 	}
 	
