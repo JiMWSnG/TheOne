@@ -53,17 +53,16 @@ public class TrafficReport extends Report implements MessageListener {
     @Override
     public void messageTransferStarted(Message m, DTNHost from, DTNHost to) {
         //下行
-        if (this.hostName.equals(from.toString())) {
+        if (from.toString().startsWith("BS") && this.hostName.equals(String.valueOf(from.getAddress()%5))) {
             double size = m.getSize();
             downstreamTraffic += size;
         }
         //上行
-        if (this.hostName.equals(to.toString())) {
+        if (to.toString().startsWith("BS") && this.hostName.equals(String.valueOf(from.getAddress()%5))) {
             double size = m.getSize();
             upstreamTraffic += size;
         }
         reportValues();
-
     }
 
     @Override
